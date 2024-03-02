@@ -25,10 +25,10 @@ class OrderHistoryController(
             accessToken = accessToken,
             orderStatus = orderStatus,
         )
+
         val orderHistoryResponse = orderHistoryAdapter.list(orderHistoryRequest)
         model.addAttribute("orderStatus", orderStatus)
         model.addAttribute("orderHistories", orderHistoryResponse.orderHistories)
-
         return "/order-history/order-history"
     }
 }

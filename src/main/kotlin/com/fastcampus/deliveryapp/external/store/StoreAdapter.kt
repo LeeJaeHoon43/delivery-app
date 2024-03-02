@@ -35,8 +35,7 @@ class StoreAdapter(
 
     override fun detail(storeId: Long): StoreDetailPageResponse? {
         val storeDetailFullPath = "$deliveryApiUrl$storeDetailPath$storeId"
-        return restTemplate
-            .getForObject(storeDetailFullPath, StoreDetailPageResponse::class.java)
+        return restTemplate.getForObject(storeDetailFullPath, StoreDetailPageResponse::class.java)
     }
 }
 

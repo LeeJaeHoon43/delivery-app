@@ -22,8 +22,7 @@ class OrderHistoryAdapter(
     private lateinit var orderHistoryPath: String
 
     fun list(request: OrderHistoryRequest): OrderHistoryResponse {
-        val orderHistoryFullPath = "$deliveryApiUrl$orderHistoryPath?customerId=${request.customerId}&orderStatus=${request
-            .orderStatus}"
+        val orderHistoryFullPath = "$deliveryApiUrl$orderHistoryPath?customerId=${request.customerId}&orderStatus=${request.orderStatus}"
 
         val headers = ExternalHttpApiUtils.getApiHeader(request.accessToken)
 

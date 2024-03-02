@@ -18,10 +18,10 @@ class HelloControllerTest {
 
     @Test
     fun hello() {
-        mvc?.perform(MockMvcRequestBuilders.get("/hello?name=Sonic"))
+        mvc?.perform(MockMvcRequestBuilders.get("/hello?name=wally"))
             ?.andExpect(status().isOk)
             ?.andExpect(content().string(
-                containsString("Hello World, Sonic")
+                containsString("Hello World, wally")
             ))
     }
 }
